@@ -9,6 +9,10 @@ import { SizeParentComponent } from './size-parent/size-parent.component';
   declarations: [SizeChildComponent, SizeParentComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+  	SizeChildComponent,
+  	SizeParentComponent,
   ]
 })
 export class SizeModule { }
