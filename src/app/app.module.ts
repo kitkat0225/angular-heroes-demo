@@ -8,6 +8,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SizeModule } from './size/size.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+
+    SizeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
