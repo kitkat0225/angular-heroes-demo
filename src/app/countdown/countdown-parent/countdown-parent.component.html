@@ -1,0 +1,13 @@
+<button (click)="timer.start()">START</button>
+<button (click)="timer.stop()">STOP</button>
+
+<div class="seconds">{{ timer.seconds }}</div>
+
+<app-countdown-child #timer></app-countdown-child>
+
+<br><br>
+
+<button (click)="start()"> Start </button>
+<button (click)="stop()"> Stop </button>
+
+<div class="seconds">{{ seconds() }}</div>
