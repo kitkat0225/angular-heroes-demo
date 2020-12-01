@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-size-child',
@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./size-child.component.css']
 })
 export class SizeChildComponent implements OnInit {
+	@Input() size: number;
+	@Output() sizeChanged = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  inc() {
+  	this.resize(+1);
+  }
+
+  dec() {
+  	this.resize(-1);
+  }
+
+  resize(delta: number) {
+  	this.size = Math.min(40, Math.max(8, (this.size + delta)));
+  	this.sizeChanged.emit(this.size);
   }
 
 }

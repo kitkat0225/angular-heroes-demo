@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SizeParentComponent implements OnInit {
 
+	fontSizePx = 16;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateFontSize(size) {
+  	this.fontSizePx = size;
   }
 
 }
