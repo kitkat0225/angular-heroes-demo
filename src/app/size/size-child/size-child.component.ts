@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SizeChildComponent implements OnInit {
 	@Input() size: number;
-	@Output() sizeChanged = new EventEmitter();
+	@Output() sizeChange = new EventEmitter<number>();
 
   constructor() { }
 
@@ -24,7 +24,7 @@ export class SizeChildComponent implements OnInit {
 
   resize(delta: number) {
   	this.size = Math.min(40, Math.max(8, (this.size + delta)));
-  	this.sizeChanged.emit(this.size);
+  	this.sizeChange.emit(this.size);
   }
 
 }

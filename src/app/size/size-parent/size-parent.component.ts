@@ -14,8 +14,4 @@ export class SizeParentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateFontSize(size) {
-  	this.fontSizePx = size;
-  }
-
 }
